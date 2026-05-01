@@ -1,0 +1,70 @@
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: oklab(82.606% -0.09993 0.11266);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-bottom: black solid 4px;
+    gap: 60px;
+    transition: box-shadow 0.3s ease;
+}
+
+nav:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+img{
+    height: 70px;
+    width: 80px;
+
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+.atag{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+a {
+    text-decoration: none;
+    color: black; /* normal visible text */
+    font-size: 25px;
+    transition: all 0.55s ease;
+}
+
+a:hover {
+    background: linear-gradient(90deg, #119759, #1673be);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Batonchiki{
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media (max-width: 600px){
+
+    nav{
+        width: 100%;
+    }
+
+    .atag {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .atag a{
+        font-size: 18px;
+    }
+}

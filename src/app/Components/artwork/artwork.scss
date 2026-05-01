@@ -1,0 +1,117 @@
+.Grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+img{
+    height: 250px;
+    width: 220px;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+.extra {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.extra p {
+  padding: 10px;
+  text-align: center;
+
+
+
+  overflow-wrap: break-word; 
+}
+
+.extra.open {
+  max-height: 1000px;
+  overflow-y: auto;
+}
+
+.extra.open::-webkit-scrollbar {
+  width: 9px; 
+}
+
+.extra.open::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.extra.open::-webkit-scrollbar-track {
+  background: transparent;
+}
+h1{
+    padding: 10px;
+}
+
+.Grid>div{
+    display: flex;
+    flex-direction: column;
+border: 3px solid black;
+align-items: center;
+border-radius: 30px;
+transition: box-shadow 0.6s ease;
+height: 350px;
+width: 300px;
+}
+
+.Grid>div:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+button{
+    height: 70px;
+    width: 150px;
+    background: linear-gradient(90deg, #119759, #1673be);
+    cursor: pointer;
+    transition: box-shadow 0.5s ease, background 0.3s ease;
+    color: white;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+button:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background: linear-gradient(90deg,#1673be, #119759)
+}
+
+.clickable{
+    transition: color 0.3s ease;
+}
+
+.clickable:hover{
+    color: #1673be;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px){
+    .Grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .Grid>div{
+width: 100%;
+    }
+
+    img{
+        height: 250px;
+        width: 230px;
+    }
+}

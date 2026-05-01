@@ -1,0 +1,61 @@
+<!-- BUTTONS -->
+<div class="buttons">
+  <button (click)="activeSection = 'paintings'" [class.active]="activeSection === 'paintings'">
+    {{translations.Paintings}}
+  </button>
+
+  <button (click)="activeSection = 'instruments'" [class.active]="activeSection === 'instruments'">
+    {{translations.Instruments}}
+  </button>
+
+  <button (click)="activeSection = 'other'" [class.active]="activeSection === 'other'">
+    {{translations.Other}}
+  </button>
+</div>
+
+<!-- PAINTINGS SECTION -->
+<div class="Grid" *ngIf="activeSection === 'paintings'">
+  <div *ngFor="let item of paintings">
+
+    <img [src]="item.image" alt="Artwork">
+
+    <h1 (click)="toggle(item)" class="clickable">
+      {{ translations[item.title] }}
+    </h1>
+
+    <div class="extra" [class.open]="item.open">
+      <p>{{ translations[item.description] }}</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- INSTRUMENTS SECTION -->
+<div class="Grid" *ngIf="activeSection === 'instruments'">
+  <div *ngFor="let item of instruments">
+
+    <img [src]="item.image">
+    <h1 (click)="toggle(item)" class="clickable">
+      {{ translations[item.title] }}
+    </h1>
+
+      <div class="extra" [class.open]="item.open">
+      <p>{{ translations[item.description] }}</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- OTHER SECTION -->
+<div class="Grid" *ngIf="activeSection === 'other'">
+  <div *ngFor="let item of other">
+    <img [src]="item.image">
+    <h1 (click)="toggle(item)" class="clickable">
+      {{ translations[item.title] }}
+    </h1>
+
+      <div class="extra" [class.open]="item.open">
+      <p>{{ translations[item.description] }}</p>
+    </div>
+  </div>
+</div>
