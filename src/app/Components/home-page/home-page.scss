@@ -6,11 +6,11 @@
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #5cbb8f, #a8d8ff); /* light green → light blue */
+  background: linear-gradient(90deg, #5cbb8f, #63b8fd); /* light green → light blue */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1.2;
 }
 
@@ -29,9 +29,12 @@ img{
     width: 330px;
     border-radius: 20px;
     border: #5e3006 solid 4px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@media (max-width: 600px){
+
+
+@media (min-width: 320px) and (max-width: 480px) {
 
     .global{
         flex-direction: column-reverse;
@@ -44,7 +47,7 @@ img{
         width: 250px;
     }
 
-    h1{
-        font-size: 20px;
+    .gradient-text{
+        font-size: 15px;
     }
 }
