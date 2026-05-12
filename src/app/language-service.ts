@@ -46,7 +46,8 @@ export class LanguageService {
         Extra12: 'This is a painting made entirely out of leather.',
         Paintings: 'Paintings',
         Instruments: 'Instruments',
-        Other: 'Other'
+        Other: 'Other',
+        Gel:'GEL'
       
 
     },
@@ -88,7 +89,7 @@ export class LanguageService {
         Extra10: 'ეს არის ფიფქი, რომელიც მთლიანად ტყავისგანაა დამზადებული.',
         Extra11: 'ეს არის დრამი, რომელიც მთლიანად ტყავისგანაა დამზადებული.',
         Extra12: 'ეს არის ნახატი, რომელიც მთლიანად ტყავისგანაა დამზადებული.',
-
+        Gel: 'ლარი',
 
     }
   };
